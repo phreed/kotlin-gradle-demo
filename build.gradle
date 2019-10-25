@@ -17,8 +17,12 @@ repositories {
 }
 
 configurations {
-    uberJarImplementation1.extendsFrom( testImplementation )
-    uberJarImplementation1.transitive = true
+//    uberJarImplementation1.extendsFrom( testImplementation )
+//    uberJarImplementation1.transitive = true
+//    uberJarImplementation1.canBeConsumed( true )
+//    uberJarImplementation1.canBeResolved( true )
+
+    implementation.extendsFrom( uberJarImplementation1 )
 }
 
 dependencies {
